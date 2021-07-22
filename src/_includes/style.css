@@ -1,0 +1,11 @@
+:root {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(0,0,0,.8);
+   }
+
+   body {
+     position: relative;
+     padding: 20px;
+     word-wrap: break-word;
+   }

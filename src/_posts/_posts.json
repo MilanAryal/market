@@ -1,0 +1,6 @@
+{
+  "author": "Milan Aryal",
+  "layout": "post",
+  "tags": ["posts"],
+  "permalink": "/{{ page.fileSlug }}/"
+}

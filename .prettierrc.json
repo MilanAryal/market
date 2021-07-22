@@ -1,0 +1,50 @@
+{
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel",
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "semi": false,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.{css,scss}",
+      "options": {
+        "parser": "css",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown",
+        "semi": true,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json",
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.{yaml,yml}",
+      "options": {
+        "parser": "yaml",
+        "singleQuote": false
+      }
+    }
+  ]
+}
