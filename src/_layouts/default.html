@@ -4,13 +4,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap-reboot.min.css" integrity="sha256-wPXiPTiVvXaM80JlMMad0nxpxcvdz7bFkpsWi2+ay4U=" crossorigin="anonymous" />
 
 <style>
-  {% include style.css %}
+  {% include "style.css" %}
 </style>
 
-{% include seo.html %}
+{% include "seo.html" %}
 
 <h1>Market</h1>
 
 <p>Disclosure: Please be informed that information I provide is NOT a trading recommendation or investment advice. All of my work is for educational purposes only.</p>
 
-{{ content }}
+{{ content | safe }}

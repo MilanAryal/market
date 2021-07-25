@@ -4,21 +4,31 @@ title: "Market"
 ---
 
 <h2 class="category">Posts</h2>
-      <ul class="posts">
-        {% for post in collections.posts reversed %}
-        <li class="post">
-          <span class="post-title">
-            {% if post.data.externalLink %}
-            <a href="{{ post.data.externalLink }}" target="__blank">{{ post.data.title }}</a>
-            {% else %}
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-            {% endif %}
-          </span>
-          <span class="post-date">
-            {{ post.date | date: '%b %d, %Y' }}
-          </span>
-        </li>
-        {% endfor %}
-      </ul>
+
+<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% set postslist = collections.post %}
+{% for post in postslist | reverse %}
+  {% if post.data.externalLink %}
+    {% set postLink = post.data.externalLink %}
+  {% else %}
+    {% set postLink = post.url | url %}
+  {% endif %}
+  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <a href="{{ postLink }}" class="postlist-link">
+      {% if post.data.title %}
+        {{ post.data.title }}
+      {% else %}
+        {{ post.url }}
+      {% endif %}
+    </a>
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | prettyDate }}</time>
+    {% if post.data.externalLink %}
+      {% include "external.svg" %}
+    {% endif %}
+  </li>
+{% endfor %}
+</ol>
+
 <br />
-<p>&copy; {{ site.buildTime | date: '%Y'}}</p>
+
+<p>&copy; {{ site.buildTime | year }}</p>

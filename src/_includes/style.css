@@ -1,11 +1,22 @@
 :root {
-    max-width: 700px;
-    margin: 0 auto;
-    color: rgba(0,0,0,.8);
-   }
+  max-width: 680px;
+  margin: 0 auto;
+  color: rgba(0,0,0,.8);
+}
 
-   body {
-     position: relative;
-     padding: 20px;
-     word-wrap: break-word;
-   }
+body {
+  position: relative;
+  padding: 20px;
+  background-color: #fafafa;
+  word-wrap: break-word;
+}
+
+.icon {
+  fill: currentColor;
+  color: inherit;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -.125em;
+  width: 1em;
+}
